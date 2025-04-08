@@ -18,7 +18,12 @@
     </p>
 </div>
 
+> [!WARNING]
+> This app is for Windows only and does not work on macOS.
+> このアプリはWindows用であり、macOSでは動作しません。
+
 ## License
 Copyright (c) 2025 arcsino
 Released under the MIT license
+<br>
 https://github.com/arcsino/bgmrp/blob/main/LICENSE
