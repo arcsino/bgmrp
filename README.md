@@ -2,7 +2,7 @@
 <div align="center">
     <br>
         <p>
-        <img src="https://raw.githubusercontent.com/arcsino/Bgmrp/main/src/assets/img/wp.png" width="600" alt="Bgmrp">
+        <img src="https://raw.githubusercontent.com/arcsino/Bgmrp/main/src/assets/img/wp.png" alt="Bgmrp">
         </p>
     <br>
     <p>
@@ -19,11 +19,10 @@
 </div>
 
 > [!WARNING]
-> This app is for Windows only and does not work on macOS.
-> このアプリはWindows用であり、macOSでは動作しません。
+> <b>This app is for Windows only and does not work on macOS.</b><br>
+> <b>このアプリはWindows専用であり、macOSでは動作しません</b>。
 
 ## License
 Copyright (c) 2025 arcsino
-Released under the MIT license
-<br>
+Released under the MIT license<br>
 https://github.com/arcsino/bgmrp/blob/main/LICENSE
