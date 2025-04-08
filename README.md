@@ -2,7 +2,7 @@
 <div align="center">
     <br>
         <p>
-        <img src="https://raw.githubusercontent.com/arcsino/Bgmrp/main/src/assets/img/wp.png" alt="Bgmrp">
+        <img src="https://raw.githubusercontent.com/arcsino/Bgmrp/main/src/assets/img/wp.png" width="600" alt="Bgmrp">
         </p>
     <br>
     <p>
