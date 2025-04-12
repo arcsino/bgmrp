@@ -11,7 +11,7 @@
         <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="#"></a>
     </p>
     <p>
-        <b>Bgmrp</b> is a desktop app that allows you to easily create resource pack that change the BGM of Minecraft.
+        <b>Bgmrp</b> is a desktop app that enables you to easily create resource pack that change the BGM of Minecraft.
     </p>
     <p>
         <b>Bgmrp</b>はMinecraftのBGMを変更するリソースパックを簡単に作れるデスクトップアプリです。

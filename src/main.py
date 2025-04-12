@@ -4,6 +4,7 @@ from navigation import NavigationItem
 from home import home_view
 from make import make_view
 from help import help_view
+from setting import setting_view
 
 
 def main(page: ft.Page):
@@ -14,7 +15,7 @@ def main(page: ft.Page):
         for n in nav:
             n.bgcolor = ft.Colors.TRANSPARENT
         views[index].visible = True
-        nav[index].bgcolor = ft.Colors.PRIMARY_CONTAINER
+        nav[index].bgcolor = ft.Colors.LIGHT_BLUE_900
         page.update()
 
     page.title = "Bgm RP Maker"
@@ -22,15 +23,15 @@ def main(page: ft.Page):
     page.window.min_height = 500
     page.window.width = 800
     page.window.height = 500
-    page.window.alignment = ft.alignment.center
     page.theme_mode = ft.ThemeMode.DARK
+    page.window.alignment = ft.alignment.center
 
-    views = [home_view(), make_view(), help_view()]
+    views = [home_view(), make_view(), help_view(), setting_view()]
     nav = [
         NavigationItem(
             label="Home",
             icon=ft.Icons.HOME,
-            bgcolor=ft.Colors.PRIMARY_CONTAINER,
+            bgcolor=ft.Colors.LIGHT_BLUE_900,
             on_click=lambda _: on_clicked(0),
         ),
         NavigationItem(
@@ -43,15 +44,23 @@ def main(page: ft.Page):
             icon=ft.Icons.HELP,
             on_click=lambda _: on_clicked(2),
         ),
+        NavigationItem(
+            label="Setting",
+            icon=ft.Icons.SETTINGS,
+            on_click=lambda _: on_clicked(3),
+        ),
     ]
     page.add(
         ft.Row(
             controls=[
-                ft.Column(controls=nav, width=200),
+                ft.Column(controls=nav, width=150),
                 ft.VerticalDivider(
                     width=10,
                 ),
-                ft.Column(controls=views, expand=True),
+                ft.Column(
+                    controls=views,
+                    expand=True,
+                ),
             ],
             expand=True,
         )
