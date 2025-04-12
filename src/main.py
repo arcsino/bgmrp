@@ -59,6 +59,7 @@ def main(page: ft.Page):
                 ),
                 ft.Column(
                     controls=views,
+                    scroll=ft.ScrollMode.AUTO,
                     expand=True,
                 ),
             ],

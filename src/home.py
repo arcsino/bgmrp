@@ -1,5 +1,5 @@
 import flet as ft
-
+from pathlib import Path
 from controls import TitleText, BodyText, ExplainContainer
 
 
@@ -7,15 +7,12 @@ def home_view():
     return ft.Column(
         controls=[
             ExplainContainer(
-                title="Bgm RP Maker",
-                body="Bgmrp is a desktop app that enables you to easily create resource pack that change the BGM of Minecraft.",
+                title="Bgm RP Maker v3.0.0",
+                body="This is a desktop app that enables you to easily create resource pack that change the BGM of Minecraft.",
             ),
-            ft.Divider(color=ft.Colors.TRANSPARENT),
-            ExplainContainer(
-                title="v3.0.0",
-                body="[+] Changed UI library from customtkinter to flet\n[+] No commands are required to play BGM. (You can listen to BGM in survival mode.)",
+            ft.Image(
+                src=Path("images/wp.png"),
+                border_radius=ft.border_radius.all(10),
             ),
         ],
-        alignment=ft.MainAxisAlignment.START,
-        scroll=ft.ScrollMode.AUTO,
     )
