@@ -1,7 +1,7 @@
 [project]
-name = "bgmrp"
-version = "0.1.0"
-description = ""
+name = "Bgmrp"
+version = "3.0.0"
+description = "This desktop app enables you to easily create resource pack that change the BGM of Minecraft."
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [

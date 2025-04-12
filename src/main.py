@@ -1,22 +1,39 @@
 import flet as ft
 
-from navigation import NavigationItem
+from navigation import NavigationBar
 from home import home_view
 from make import make_view
 from help import help_view
 from setting import setting_view
 
 
-def main(page: ft.Page):
+class MainView(ft.Row):
+    def __init__(self):
+        super().__init__()
+        self.expand = True
+        self.nav = NavigationBar(on_click=self.on_clicked)
+        self.views = [home_view(), make_view(), help_view(), setting_view()]
+        self.controls = [
+            self.nav,
+            ft.VerticalDivider(width=10),
+            ft.Column(
+                controls=self.views,
+                scroll=ft.ScrollMode.AUTO,
+                expand=True,
+            ),
+        ]
 
-    def on_clicked(index):
-        for view in views:
+    def on_clicked(self, index):
+        for view in self.views:
             view.visible = False
-        for n in nav:
+        for n in self.nav.controls:
             n.bgcolor = ft.Colors.TRANSPARENT
-        views[index].visible = True
-        nav[index].bgcolor = ft.Colors.LIGHT_BLUE_900
-        page.update()
+        self.views[index].visible = True
+        self.nav.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_900
+        self.update()
+
+
+def main(page: ft.Page):
 
     page.title = "Bgm RP Maker"
     page.window.min_width = 800
@@ -25,47 +42,10 @@ def main(page: ft.Page):
     page.window.height = 500
     page.theme_mode = ft.ThemeMode.DARK
     page.window.alignment = ft.alignment.center
+    page.add(MainView())
 
-    views = [home_view(), make_view(), help_view(), setting_view()]
-    nav = [
-        NavigationItem(
-            label="Home",
-            icon=ft.Icons.HOME,
-            bgcolor=ft.Colors.LIGHT_BLUE_900,
-            on_click=lambda _: on_clicked(0),
-        ),
-        NavigationItem(
-            label="Make",
-            icon=ft.Icons.CREATE_NEW_FOLDER,
-            on_click=lambda _: on_clicked(1),
-        ),
-        NavigationItem(
-            label="Help",
-            icon=ft.Icons.HELP,
-            on_click=lambda _: on_clicked(2),
-        ),
-        NavigationItem(
-            label="Setting",
-            icon=ft.Icons.SETTINGS,
-            on_click=lambda _: on_clicked(3),
-        ),
-    ]
-    page.add(
-        ft.Row(
-            controls=[
-                ft.Column(controls=nav, width=150),
-                ft.VerticalDivider(
-                    width=10,
-                ),
-                ft.Column(
-                    controls=views,
-                    scroll=ft.ScrollMode.AUTO,
-                    expand=True,
-                ),
-            ],
-            expand=True,
-        )
-    )
+    page.client_storage.set("key", "value")
+    page.client_storage.clear()
 
 
 if __name__ == "__main__":
