@@ -18,7 +18,6 @@ class MainView(ft.Row):
             ft.VerticalDivider(width=10),
             ft.Column(
                 controls=self.views,
-                scroll=ft.ScrollMode.AUTO,
                 expand=True,
             ),
         ]

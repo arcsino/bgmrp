@@ -96,11 +96,14 @@ class ProjectItem(ft.Column):
 class ProjectColumn(ft.Column):
     def __init__(self, edit_project):
         super().__init__()
+        self.expand = True
+        self.scroll = ft.ScrollMode.AUTO
         self.edit_project = edit_project
         self.projects = self.get_projects()
         self.project_column = ft.Column()
         self.textfield = CustomTextField(label="新規プロジェクト")
         self.controls = [
+            ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(
                 title="プロジェクト一覧",
                 body="プロジェクトに作成時の情報を保存しておくことで、追加の変更がしやすくなります。",
@@ -117,6 +120,7 @@ class ProjectColumn(ft.Column):
                 ]
             ),
             self.project_column,
+            ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
         ]
         self.project_column.controls = [
             ProjectItem(

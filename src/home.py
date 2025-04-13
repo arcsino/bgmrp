@@ -5,6 +5,8 @@ from controls import TitleText, BodyText, ExplainContainer
 
 def home_view():
     return ft.Column(
+        expand=True,
+        scroll=ft.ScrollMode.AUTO,
         controls=[
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(

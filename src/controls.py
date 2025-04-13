@@ -15,6 +15,13 @@ class BodyText(ft.Text):
         self.theme_style = ft.TextThemeStyle.BODY_LARGE
 
 
+class LabelText(ft.Text):
+    def __init__(self, value):
+        super().__init__()
+        self.value = value
+        self.theme_style = ft.TextThemeStyle.HEADLINE_SMALL
+
+
 class ExplainContainer(ft.Container):
     def __init__(self, title, body):
         super().__init__()
