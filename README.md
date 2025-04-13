@@ -6,12 +6,9 @@
         </p>
     <br>
     <p>
-        <a href="https://www.python.org/downloads/release/python-3126/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/python-3.12.6-blue" alt="#"></a>
-        <a href="https://flet.dev/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/flet-0.27.6-ff1463" alt="#"></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="#"></a>
-    </p>
-    <p>
-        <b>Bgmrp</b> is a desktop app that enables you to easily create resource pack that change the BGM of Minecraft.
+        <a href="https://www.python.org/downloads/release/python-3126/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/python-3.12.6-blue" alt="python-3.12.6"></a>
+        <a href="https://flet.dev/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/flet-0.27.6-ff1463" alt="flet-0.27.6"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="license-MIT"></a>
     </p>
     <p>
         <b>Bgmrp</b>はMinecraftのBGMを変更するリソースパックを簡単に作れるデスクトップアプリです。
@@ -19,7 +16,6 @@
 </div>
 
 > [!WARNING]
-> <b>This app is for Windows only and does not work on macOS.</b><br>
 > <b>このアプリはWindows専用であり、macOSでは動作しません</b>。
 
 ## License

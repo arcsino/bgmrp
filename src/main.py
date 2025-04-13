@@ -2,7 +2,7 @@ import flet as ft
 
 from navigation import NavigationBar
 from home import home_view
-from make import make_view
+from makes.make import make_view
 from help import help_view
 from setting import setting_view
 
@@ -24,12 +24,13 @@ class MainView(ft.Row):
         ]
 
     def on_clicked(self, index):
-        for view in self.views:
+        for view, nav in zip(self.views, self.nav.controls):
             view.visible = False
-        for n in self.nav.controls:
-            n.bgcolor = ft.Colors.TRANSPARENT
+            nav.bgcolor = ft.Colors.TRANSPARENT
+            nav.icon.color = ft.Colors.PRIMARY
         self.views[index].visible = True
-        self.nav.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_900
+        self.nav.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_700
+        self.nav.controls[index].icon.color = ft.Colors.WHITE
         self.update()
 
 
@@ -43,9 +44,6 @@ def main(page: ft.Page):
     page.theme_mode = ft.ThemeMode.DARK
     page.window.alignment = ft.alignment.center
     page.add(MainView())
-
-    page.client_storage.set("key", "value")
-    page.client_storage.clear()
 
 
 if __name__ == "__main__":

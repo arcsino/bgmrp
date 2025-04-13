@@ -2,19 +2,27 @@ import flet as ft
 
 
 class NavigationItem(ft.Container):
-    def __init__(self, label, icon, on_click, bgcolor=ft.Colors.TRANSPARENT):
+    def __init__(
+        self,
+        label,
+        icon,
+        on_click,
+        bgcolor=ft.Colors.TRANSPARENT,
+        icon_color=ft.Colors.PRIMARY,
+    ):
         super().__init__()
+        self.bgcolor = bgcolor
+        self.on_click = on_click
+        self.padding = 20
+        self.border_radius = ft.border_radius.all(5)
+        self.ink = True
+        self.icon = ft.Icon(name=icon, color=icon_color)
         self.content = ft.Row(
             controls=[
-                ft.Icon(name=icon, color=ft.Colors.WHITE),
-                ft.Text(value=label),
+                self.icon,
+                ft.Text(value=label, theme_style=ft.TextThemeStyle.TITLE_SMALL),
             ]
         )
-        self.padding = 20
-        self.bgcolor = bgcolor
-        self.border_radius = ft.border_radius.all(10)
-        self.ink = True
-        self.on_click = on_click
 
 
 class NavigationBar(ft.Column):
@@ -24,23 +32,24 @@ class NavigationBar(ft.Column):
         self.on_clicked = on_click
         self.controls = [
             NavigationItem(
-                label="Home",
+                label="ホーム",
                 icon=ft.Icons.HOME,
-                bgcolor=ft.Colors.LIGHT_BLUE_900,
+                bgcolor=ft.Colors.LIGHT_BLUE_700,
+                icon_color=ft.Colors.WHITE,
                 on_click=lambda _: self.on_clicked(0),
             ),
             NavigationItem(
-                label="Make",
+                label="作成",
                 icon=ft.Icons.CREATE_NEW_FOLDER,
                 on_click=lambda _: self.on_clicked(1),
             ),
             NavigationItem(
-                label="Help",
+                label="ヘルプ",
                 icon=ft.Icons.HELP,
                 on_click=lambda _: self.on_clicked(2),
             ),
             NavigationItem(
-                label="Setting",
+                label="設定",
                 icon=ft.Icons.SETTINGS,
                 on_click=lambda _: self.on_clicked(3),
             ),

@@ -6,20 +6,20 @@ from controls import TitleText, BodyText, ExplainContainer
 def home_view():
     return ft.Column(
         controls=[
+            ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(
                 title="Bgm RP Maker v3.0.0",
-                body="This is a desktop app that enables you to easily create resource pack that change the BGM of Minecraft.",
+                body="MinecraftのBGMを変更するリソースパックを簡単に作れるデスクトップアプリです。\n※Java版限定です。",
             ),
-            ft.Divider(color=ft.Colors.TRANSPARENT),
             ft.Image(
                 src=Path("images/wp.png"),
                 border_radius=ft.border_radius.all(10),
             ),
-            ft.Divider(color=ft.Colors.TRANSPARENT),
+            ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(
                 title="v3.0.0",
-                body="[+] Changed UI library from customtkinter to flet.",
+                body="[+] uiライブラリをcustomtkinterからfletに変更しました",
             ),
-            ft.Divider(height=50, color=ft.Colors.TRANSPARENT),
+            ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
         ],
     )
