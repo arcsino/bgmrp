@@ -9,9 +9,10 @@ class TitleText(ft.Text):
 
 
 class BodyText(ft.Text):
-    def __init__(self, value):
+    def __init__(self, value, expand=False):
         super().__init__()
         self.value = value
+        self.expand = expand
         self.theme_style = ft.TextThemeStyle.BODY_LARGE
 
 
@@ -41,9 +42,24 @@ class ExplainContainer(ft.Container):
 
 
 class CustomTextField(ft.TextField):
-    def __init__(self, label):
+    def __init__(self, label, value="", expand=False):
         super().__init__()
         self.label = label
+        self.value = value
+        self.expand = expand
+        self.bgcolor = ft.Colors.SURFACE
+        self.border_color = ft.Colors.BLUE_GREY_200
+
+
+class MultiLineTextField(ft.TextField):
+    def __init__(self, label, value="", expand=False):
+        super().__init__()
+        self.label = label
+        self.value = value
+        self.expand = expand
+        self.min_lines = 1
+        self.max_lines = 9
+        self.multiline = True
         self.bgcolor = ft.Colors.SURFACE
         self.border_color = ft.Colors.BLUE_GREY_200
 
@@ -53,6 +69,7 @@ class CustomBorderContainer(ft.Container):
         super().__init__()
         self.content = content
         self.visible = visible
+        self.expand = True
         self.padding = ft.padding.all(10)
         self.bgcolor = ft.Colors.BLUE_GREY_900
         self.border = ft.border.all(1, ft.Colors.BLUE_GREY_200)

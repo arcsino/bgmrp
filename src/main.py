@@ -1,10 +1,10 @@
 import flet as ft
 
 from navigation import NavigationBar
-from home import home_view
+from homes.home import home_view
 from makes.make import make_view
-from help import help_view
-from setting import setting_view
+from helps.help import help_view
+from settings.setting import setting_view
 
 
 class MainView(ft.Row):
@@ -28,7 +28,7 @@ class MainView(ft.Row):
             nav.bgcolor = ft.Colors.TRANSPARENT
             nav.icon.color = ft.Colors.PRIMARY
         self.views[index].visible = True
-        self.nav.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_700
+        self.nav.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_900
         self.nav.controls[index].icon.color = ft.Colors.WHITE
         self.update()
 

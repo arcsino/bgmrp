@@ -34,7 +34,7 @@ class NavigationBar(ft.Column):
             NavigationItem(
                 label="ホーム",
                 icon=ft.Icons.HOME,
-                bgcolor=ft.Colors.LIGHT_BLUE_700,
+                bgcolor=ft.Colors.LIGHT_BLUE_900,
                 icon_color=ft.Colors.WHITE,
                 on_click=lambda _: self.on_clicked(0),
             ),

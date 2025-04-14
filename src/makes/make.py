@@ -13,7 +13,7 @@ class MakeView(ft.Column):
         self.index_1 = EditProject(
             back_click=self.project_list,
             next_click=self.save_project,
-            project=Path(),
+            project_path=Path(),
         )
         self.controls = [self.index_0, self.index_1]
 
@@ -21,18 +21,14 @@ class MakeView(ft.Column):
         for control in self.controls:
             control.visible = False
         self.index_0.visible = True
+        self.index_1.controls = []
         self.update()
 
     def edit_project(self, e):
         for control in self.controls:
             control.visible = False
         self.index_1.visible = True
-        self.index_1.project = e.project_path
-        self.index_1.project_title.value = (
-            e.project_path.stem
-            if len(e.project_path.stem) <= 20
-            else e.project_path.stem[:20] + "..."
-        )
+        self.index_1.update_project(e.project_path)
         self.update()
 
     def save_project(self, e):
