@@ -1,7 +1,11 @@
-import json, os
+import json, os, zipfile
+from datetime import datetime
 from pathlib import Path
 
 from data.blank_project import get_blank_project_obj
+
+
+APP_DATA_PATH = Path(os.getenv("FLET_APP_STORAGE_DATA"))
 
 
 class ProjectInfo:
@@ -34,7 +38,6 @@ def get_project_dict(path):
             )
             return info
     except Exception as e:
-        print(e)
         obj = get_blank_project_obj()
         name = obj["name"]
         description = obj["description"]
@@ -50,8 +53,31 @@ def get_project_dict(path):
             volume=volume,
             version=version,
         )
-        print(info.icon)
         return info
+
+
+def rename_project_file(filepath: Path, newname: str) -> Path:
+    filepath.rename(APP_DATA_PATH / f"{newname}.json")
+    return filepath
+
+
+def get_project_files():
+    return list(APP_DATA_PATH.glob("*.json"))
+
+
+def new_project_file(filename):
+    try:
+        if filename == "":
+            raise Exception("プロジェクト名を入力してください。")
+        new_project = APP_DATA_PATH / f"{filename}.json"
+        new_project.touch(exist_ok=False)
+    except Exception as e:
+        print(e)
+
+
+def delete_project_file(filepath: Path) -> None:
+    delete_project = filepath
+    delete_project.unlink(missing_ok=True)
 
 
 def get_sounds_dict(name, volume):

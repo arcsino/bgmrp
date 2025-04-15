@@ -1,35 +1,32 @@
 import flet as ft
 from pathlib import Path
 
-from controls import BodyText, CustomBorderContainer
+from controls import BodyText, BorderContainer
 
 
 class IconTab(ft.Column):
-    def __init__(self, project_obj):
+    def __init__(self, icon):
         super().__init__()
-        self.project_obj = project_obj
+        self.icon = icon
+
         self.expand = True
         self.scroll = ft.ScrollMode.AUTO
-        self.select_field = CustomBorderContainer(
+        self.image = ft.Image(
+            src=(self.icon if self.icon else Path("images/square.png")),
+            border_radius=ft.border_radius.all(5),
+            width=50,
+        )
+        self.body_path = ft.Container(
+            expand=True,
+            content=BodyText(
+                value=(self.icon if self.icon else "画像を選択してください。")
+            ),
+        )
+        self.select_field = BorderContainer(
             content=ft.Row(
                 controls=[
-                    ft.Image(
-                        src=(
-                            self.project_obj.icon
-                            if self.project_obj.icon
-                            else Path("images/square.png")
-                        ),
-                        border_radius=ft.border_radius.all(5),
-                        width=50,
-                    ),
-                    BodyText(
-                        value=(
-                            self.project_obj.icon
-                            if self.project_obj.icon
-                            else "画像を選択してください。"
-                        ),
-                        expand=True,
-                    ),
+                    self.image,
+                    self.body_path,
                     ft.IconButton(
                         icon=ft.Icons.OPEN_IN_BROWSER,
                         icon_color=ft.Colors.WHITE,

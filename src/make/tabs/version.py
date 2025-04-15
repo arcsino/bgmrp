@@ -5,9 +5,10 @@ from data.format_version import get_format_version
 
 
 class VersionTab(ft.Column):
-    def __init__(self, project_obj):
+    def __init__(self, version):
         super().__init__()
-        self.project_obj = project_obj
+        self.version = version
+
         self.expand = True
         self.scroll = ft.ScrollMode.AUTO
         self.format = get_format_version()
@@ -16,7 +17,7 @@ class VersionTab(ft.Column):
             for key in self.format.keys()
         ]
         self.dropdown = ft.Dropdown(
-            value=self.project_obj.version,
+            value=self.version,
             options=self.options,
             border_color=ft.Colors.BLUE_GREY_200,
         )

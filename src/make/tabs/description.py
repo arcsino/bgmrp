@@ -4,14 +4,15 @@ from controls import BodyText, MultiLineTextField
 
 
 class DescriptionTab(ft.Column):
-    def __init__(self, project_obj):
+    def __init__(self, description):
         super().__init__()
-        self.project_obj = project_obj
+        self.description = description
+
         self.expand = True
         self.scroll = ft.ScrollMode.AUTO
         self.textfield = MultiLineTextField(
             label="リソースパックの説明",
-            value=self.project_obj.description,
+            value=self.description,
             expand=True,
         )
         self.controls = [

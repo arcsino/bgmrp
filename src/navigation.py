@@ -1,7 +1,7 @@
 import flet as ft
 
 
-class NavigationItem(ft.Container):
+class NavItem(ft.Container):
     def __init__(
         self,
         label,
@@ -11,46 +11,57 @@ class NavigationItem(ft.Container):
         icon_color=ft.Colors.PRIMARY,
     ):
         super().__init__()
-        self.bgcolor = bgcolor
+        self.label = label
+        self.icon = ft.Icon(name=icon, color=icon_color)
         self.on_click = on_click
+        self.bgcolor = bgcolor
+
+        self.ink = True
         self.padding = 20
         self.border_radius = ft.border_radius.all(5)
-        self.ink = True
-        self.icon = ft.Icon(name=icon, color=icon_color)
         self.content = ft.Row(
             controls=[
                 self.icon,
-                ft.Text(value=label, theme_style=ft.TextThemeStyle.TITLE_SMALL),
+                ft.Text(value=self.label, theme_style=ft.TextThemeStyle.TITLE_SMALL),
             ]
         )
 
 
-class NavigationBar(ft.Column):
-    def __init__(self, on_click):
+class NavView(ft.Column):
+    def __init__(self, item_clicked):
         super().__init__()
+        self.item_clicked = item_clicked
+
         self.width = 150
-        self.on_clicked = on_click
         self.controls = [
-            NavigationItem(
+            NavItem(
                 label="ホーム",
                 icon=ft.Icons.HOME,
                 bgcolor=ft.Colors.LIGHT_BLUE_900,
                 icon_color=ft.Colors.WHITE,
                 on_click=lambda _: self.on_clicked(0),
             ),
-            NavigationItem(
+            NavItem(
                 label="作成",
                 icon=ft.Icons.CREATE_NEW_FOLDER,
                 on_click=lambda _: self.on_clicked(1),
             ),
-            NavigationItem(
+            NavItem(
                 label="ヘルプ",
                 icon=ft.Icons.HELP,
                 on_click=lambda _: self.on_clicked(2),
             ),
-            NavigationItem(
+            NavItem(
                 label="設定",
                 icon=ft.Icons.SETTINGS,
                 on_click=lambda _: self.on_clicked(3),
             ),
         ]
+
+    def on_clicked(self, index):
+        for nav in self.controls:
+            nav.bgcolor = ft.Colors.TRANSPARENT
+            nav.icon.color = ft.Colors.PRIMARY
+        self.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_900
+        self.controls[index].icon.color = ft.Colors.WHITE
+        self.item_clicked(index)

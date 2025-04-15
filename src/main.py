@@ -1,20 +1,20 @@
 import flet as ft
 
-from navigation import NavigationBar
-from homes.home import home_view
-from makes.make import make_view
-from helps.help import help_view
-from settings.setting import setting_view
+from navigation import NavView
+from home.home_view import HomeView
+from make.make_view import MakeView
+from help.help_view import HelpView
+from setting.setting_view import SettingView
 
 
 class MainView(ft.Row):
     def __init__(self):
         super().__init__()
         self.expand = True
-        self.nav = NavigationBar(on_click=self.on_clicked)
-        self.views = [home_view(), make_view(), help_view(), setting_view()]
+        self.navbar = NavView(item_clicked=self.item_clicked)
+        self.views = [HomeView(), MakeView(), HelpView(), SettingView()]
         self.controls = [
-            self.nav,
+            self.navbar,
             ft.VerticalDivider(width=10),
             ft.Column(
                 controls=self.views,
@@ -22,14 +22,11 @@ class MainView(ft.Row):
             ),
         ]
 
-    def on_clicked(self, index):
-        for view, nav in zip(self.views, self.nav.controls):
+    def item_clicked(self, index):
+        """when NavItem() is clicked"""
+        for view in self.views:
             view.visible = False
-            nav.bgcolor = ft.Colors.TRANSPARENT
-            nav.icon.color = ft.Colors.PRIMARY
         self.views[index].visible = True
-        self.nav.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_900
-        self.nav.controls[index].icon.color = ft.Colors.WHITE
         self.update()
 
 

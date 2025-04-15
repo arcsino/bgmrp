@@ -1,14 +1,15 @@
 import flet as ft
 from pathlib import Path
 
-from controls import TitleText, BodyText, ExplainContainer
+from controls import ExplainContainer
 
 
-def home_view():
-    return ft.Column(
-        expand=True,
-        scroll=ft.ScrollMode.AUTO,
-        controls=[
+class HomeView(ft.Column):
+    def __init__(self):
+        super().__init__()
+        self.expand = True
+        self.scroll = ft.ScrollMode.AUTO
+        self.controls = [
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(
                 title="Bgm RP Maker v3.0.0",
@@ -24,5 +25,4 @@ def home_view():
                 body="[+] uiライブラリをcustomtkinterからfletに変更しました",
             ),
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
-        ],
-    )
+        ]

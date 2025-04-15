@@ -4,13 +4,14 @@ from controls import BodyText
 
 
 class VolumeTab(ft.Column):
-    def __init__(self, project_obj):
+    def __init__(self, volume):
         super().__init__()
-        self.project_obj = project_obj
+        self.volume = volume
+
         self.expand = True
         self.scroll = ft.ScrollMode.AUTO
         self.slider = ft.Slider(
-            value=self.project_obj.volume,
+            value=self.volume,
             min=0,
             max=100,
             divisions=10,
