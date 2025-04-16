@@ -1,6 +1,6 @@
 import flet as ft
 
-from make.project_list import ProjectList
+from make.project_list import ProjectItem, ProjectList
 from make.edit_project import EditProject
 
 
@@ -15,7 +15,7 @@ class MakeView(ft.Column):
         self.controls = [ProjectList(self.edit_project)]
         self.update()
 
-    def edit_project(self, item):
+    def edit_project(self, item: ProjectItem):
         self.controls = [
             EditProject(
                 project_path=item.project_path,

@@ -57,22 +57,26 @@ class ExplainContainer(ft.Container):
 
 
 class CustomTextField(ft.TextField):
-    def __init__(self, label, value="", expand=False):
+    def __init__(self, label, value="", expand=False, on_change=None):
         super().__init__()
         self.label = label
         self.value = value
         self.expand = expand
+        if on_change:
+            self.on_change = on_change
 
         self.bgcolor = ft.Colors.SURFACE
         self.border_color = ft.Colors.BLUE_GREY_200
 
 
 class MultiLineTextField(ft.TextField):
-    def __init__(self, label, value="", expand=False):
+    def __init__(self, label, value="", expand=False, on_change=None):
         super().__init__()
         self.label = label
         self.value = value
         self.expand = expand
+        if on_change:
+            self.on_change = on_change
 
         self.min_lines = 1
         self.max_lines = 9
@@ -81,14 +85,21 @@ class MultiLineTextField(ft.TextField):
         self.border_color = ft.Colors.BLUE_GREY_200
 
 
-class CustomButton(ft.FilledButton):
-    def __init__(self, text, icon, on_click):
+class CustomButton(ft.Container):
+    def __init__(self, height, text, icon, on_click):
         super().__init__()
+        self.height = height
         self.text = text
-        self.icon = icon
+        self.icon = ft.Icon(name=icon, color=ft.Colors.WHITE)
         self.on_click = on_click
 
-        self.color = ft.Colors.WHITE
+        self.ink = True
         self.bgcolor = ft.Colors.LIGHT_BLUE_900
-        self.icon_color = ft.Colors.WHITE
-        self.style = ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=5))
+        self.border_radius = ft.border_radius.all(5)
+        self.padding = ft.padding.only(left=10, right=10)
+        self.content = ft.Row(
+            controls=[
+                ft.Icon(name=ft.Icons.FOLDER_ZIP, color=ft.Colors.WHITE),
+                ft.Text(value="作成する", theme_style=ft.TextThemeStyle.TITLE_SMALL),
+            ]
+        )

@@ -16,9 +16,13 @@ class VolumeTab(ft.Column):
             max=100,
             divisions=10,
             label="{value}%",
+            on_change=self.changed_value,
         )
         self.controls = [
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             BodyText(value="BGMの音量を設定してください。"),
             self.slider,
         ]
+
+    def changed_value(self, _):
+        self.volume = self.slider.value

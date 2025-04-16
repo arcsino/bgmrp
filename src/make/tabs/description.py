@@ -14,6 +14,7 @@ class DescriptionTab(ft.Column):
             label="リソースパックの説明",
             value=self.description,
             expand=True,
+            on_change=self.changed_value,
         )
         self.controls = [
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
@@ -25,3 +26,6 @@ class DescriptionTab(ft.Column):
                 ]
             ),
         ]
+
+    def changed_value(self, e: ft.ControlEvent):
+        self.description = e.data

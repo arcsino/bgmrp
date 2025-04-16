@@ -15,7 +15,7 @@ class MainView(ft.Row):
         self.views = [HomeView(), MakeView(), HelpView(), SettingView()]
         self.controls = [
             self.navbar,
-            ft.VerticalDivider(width=10),
+            ft.VerticalDivider(width=5),
             ft.Column(
                 controls=self.views,
                 expand=True,

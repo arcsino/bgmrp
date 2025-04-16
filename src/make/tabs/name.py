@@ -11,7 +11,10 @@ class NameTab(ft.Column):
         self.expand = True
         self.scroll = ft.ScrollMode.AUTO
         self.textfield = CustomTextField(
-            label="リソースパック名", value=self.name, expand=True
+            label="リソースパック名",
+            value=self.name,
+            expand=True,
+            on_change=self.changed_value,
         )
         self.controls = [
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
@@ -23,3 +26,6 @@ class NameTab(ft.Column):
                 ]
             ),
         ]
+
+    def changed_value(self, e: ft.ControlEvent):
+        self.name = e.data

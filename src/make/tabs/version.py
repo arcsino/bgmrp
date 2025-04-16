@@ -20,9 +20,13 @@ class VersionTab(ft.Column):
             value=self.version,
             options=self.options,
             border_color=ft.Colors.BLUE_GREY_200,
+            on_change=self.changed_option,
         )
         self.controls = [
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             BodyText(value="Minecraftのバージョンを設定してください。"),
             self.dropdown,
         ]
+
+    def changed_option(self, e: ft.ControlEvent):
+        self.version = e.data
