@@ -115,7 +115,7 @@ class CustomButton(ft.Container):
         if bgcolor:
             self.bgcolor = bgcolor
         else:
-            self.bgcolor = ft.Colors.ON_INVERSE_SURFACE
+            self.bgcolor = ft.Colors.PRIMARY_CONTAINER
 
         self.ink = True
         self.expand = False

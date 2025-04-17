@@ -11,7 +11,7 @@
         <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="license-MIT"></a>
     </p>
     <p><b>Bgmrp</b>はMinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。</p>
-    <h4>リソースパックはJava版でのみ利用できます。</h4>
+    <p><b>リソースパックはJava版でのみ利用できます。</b></p>
 </div>
 
 ## Download

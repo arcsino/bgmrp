@@ -2,7 +2,6 @@ import flet as ft
 
 from make.project_list import ProjectItem, ProjectList
 from make.edit_project import EditProject
-from make.making_rp import MakingRP
 
 
 class MakeView(ft.Column):
