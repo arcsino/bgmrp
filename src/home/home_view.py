@@ -1,7 +1,7 @@
 import flet as ft
 from pathlib import Path
 
-from controls import ExplainContainer
+from controls import ExplainContainer, BodyText
 
 
 class HomeView(ft.Column):
@@ -13,8 +13,9 @@ class HomeView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(
                 title="Bgm RP Maker v3.0.0",
-                body="MinecraftのBGMを変更するリソースパックを簡単に作れるデスクトップアプリです。\n※Java版限定です。",
+                body="MinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。",
             ),
+            BodyText(value="※Java版限定です。"),
             ft.Image(
                 src=Path("images/wp.png"),
                 border_radius=ft.border_radius.all(10),
