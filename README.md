@@ -10,7 +10,7 @@
         <a href="https://flet.dev/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/flet-0.27.6-ff1463" alt="flet-0.27.6"></a>
         <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="license-MIT"></a>
     </p>
-    <p><b>Bgmrp</b>はMinecraftのBGMを変更するリソースパックを簡単に作れるデスクトップアプリです。</p>
+    <p><b>Bgmrp</b>はMinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。</p>
     <h4>リソースパックはJava版でのみ利用できます。</h4>
 </div>
 
