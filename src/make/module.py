@@ -155,8 +155,7 @@ def get_sounds_list(sounds, volume):
 def get_sounds_json(sounds, volume):
     s_list = get_sounds_list(sounds, volume)
     s_json = get_blank_sounds_obj()
-    for key in s_json.keys():
-        s_json[key] = {"sounds": s_list}
+    s_json["bgm"] = {"sounds": s_list}
     return s_json
 
 
