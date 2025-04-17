@@ -2,6 +2,7 @@ import flet as ft
 
 from make.project_list import ProjectItem, ProjectList
 from make.edit_project import EditProject
+from make.making_rp import MakingRP
 
 
 class MakeView(ft.Column):
@@ -19,11 +20,7 @@ class MakeView(ft.Column):
         self.controls = [
             EditProject(
                 project_path=item.project_path,
-                back_click=self.project_list,
-                next_click=self.making_rp,
+                back_clicking=self.project_list,
             )
         ]
         self.update()
-
-    def making_rp(self):
-        pass

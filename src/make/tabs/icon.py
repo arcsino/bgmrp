@@ -2,7 +2,7 @@ import flet as ft
 from pathlib import Path
 
 from controls import BodyText, BorderContainer
-from make.make_rp import get_icon_image
+from make.module import get_icon_image
 
 
 class IconTab(ft.Column):

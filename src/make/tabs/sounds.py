@@ -22,7 +22,7 @@ class SoundsTab(ft.Column):
                     ft.Container(
                         expand=True,
                         content=BodyText(
-                            value="リソースパックの音声を選択してください。音声ファイルは拡張子.OGGです。"
+                            value="追加するBGMを選択してください。オーディオファイルは拡張子.OGGです。"
                         ),
                     ),
                     ft.IconButton(

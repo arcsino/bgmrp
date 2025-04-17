@@ -37,8 +37,8 @@ class NavView(ft.Column):
             NavItem(
                 label="ホーム",
                 icon=ft.Icons.HOME,
-                bgcolor=ft.Colors.LIGHT_BLUE_900,
-                icon_color=ft.Colors.WHITE,
+                bgcolor=ft.Colors.PRIMARY_CONTAINER,
+                icon_color=ft.Colors.ON_PRIMARY_CONTAINER,
                 on_click=lambda _: self.on_clicked(0),
             ),
             NavItem(
@@ -62,6 +62,6 @@ class NavView(ft.Column):
         for nav in self.controls:
             nav.bgcolor = ft.Colors.TRANSPARENT
             nav.icon.color = ft.Colors.PRIMARY
-        self.controls[index].bgcolor = ft.Colors.LIGHT_BLUE_900
-        self.controls[index].icon.color = ft.Colors.WHITE
+        self.controls[index].bgcolor = ft.Colors.PRIMARY_CONTAINER
+        self.controls[index].icon.color = ft.Colors.ON_PRIMARY_CONTAINER
         self.item_clicked(index)
