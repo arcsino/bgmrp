@@ -14,7 +14,7 @@
     <h4>リソースパックはJava版でのみ利用できます。</h4>
 </div>
 
-# Download
+## Download
 > [!WARNING]
 > <b>このアプリはWindows専用であり、macOSでは動作しません</b>。
 
