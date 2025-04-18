@@ -1,4 +1,4 @@
-# Bgmrp app
+# Bgmrp
 <div align="center">
     <br>
         <p>
