@@ -8,7 +8,7 @@
     <p>
         <a href="https://www.python.org/downloads/release/python-3126/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/python-3.12.6-blue" alt="python-3.12.6"></a>
         <a href="https://flet.dev/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/flet-0.27.6-ff1463" alt="flet-0.27.6"></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="license-MIT"></a>
+        <a href="https://github.com/arcsino/Bgmrp/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="license-MIT"></a>
     </p>
     <p><b>Bgmrp</b>はMinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。</p>
     <p><b>※リソースパックはJava版でのみ利用できます。</b></p>
