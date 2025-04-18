@@ -11,14 +11,12 @@
         <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="license-MIT"></a>
     </p>
     <p><b>Bgmrp</b>はMinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。</p>
-    <p><b>リソースパックはJava版でのみ利用できます。</b></p>
+    <p><b>※リソースパックはJava版でのみ利用できます。</b></p>
 </div>
 
 ## Description
-追加されたBGMはデフォルトのBGMより、若干再生されやすいです。
-100回中、46回がデフォルトのBGMで、54回が追加したBGMくらいの感覚。
-運が悪かったり設定を間違えたら、再生されません。
-以下のコマンドで必ず再生されます。
+生成されるリソースパックは、あくまでもBGMを追加するのであって、デフォルトのBGMを置き換える訳ではありません。デフォルトのBGMも再生されますし、運が悪かったり設定を間違えたら、追加したBGMは再生されません。<br>
+- 以下のコマンドで追加したBGMが必ず再生されますので、動作確認の際は以下のコマンドを実行してください。
 ```
 /playsound minecraft:bgm music @p
 ```
