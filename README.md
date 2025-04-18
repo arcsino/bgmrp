@@ -20,7 +20,7 @@
 運が悪かったり設定を間違えたら、再生されません。
 以下のコマンドで必ず再生されます。
 ```
-/playsound bgm music @p
+/playsound minecraft:bgm music @p
 ```
 
 ## Download
