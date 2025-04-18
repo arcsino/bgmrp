@@ -32,11 +32,9 @@ class MainView(ft.Row):
 
 def main(page: ft.Page):
 
-    page.title = "Bgm RP Maker"
+    page.title = "Bgmrp"
     page.window.min_width = 800
     page.window.min_height = 500
-    page.window.width = 800
-    page.window.height = 500
     page.theme_mode = ft.ThemeMode.DARK
     page.window.alignment = ft.alignment.center
     page.add(MainView())

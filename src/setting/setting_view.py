@@ -15,7 +15,10 @@ class SettingView(ft.Column):
                 title="設定",
                 body="テーマを切り替えることができます。",
             ),
-            ft.Switch(label="Light theme", on_change=self.theme_changed),
+            ft.Switch(
+                label=" Light theme",
+                on_change=self.theme_changed,
+            ),
         ]
 
     def theme_changed(self, e):

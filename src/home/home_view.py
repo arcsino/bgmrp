@@ -12,18 +12,13 @@ class HomeView(ft.Column):
         self.controls = [
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(
-                title="Bgm RP Maker v3.0.0",
+                title="Bgmrp v1.0.0",
                 body="MinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。",
             ),
             BodyText(value="※Java版限定です。"),
             ft.Image(
                 src=Path("images/wp.png"),
                 border_radius=ft.border_radius.all(10),
-            ),
-            ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
-            ExplainContainer(
-                title="v3.0.0",
-                body="[+] uiライブラリをcustomtkinterからfletに変更しました",
             ),
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
         ]

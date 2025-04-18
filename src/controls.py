@@ -22,7 +22,7 @@ class BodyText(ft.Text):
         super().__init__()
         self.value = value
 
-        self.theme_style = ft.TextThemeStyle.BODY_MEDIUM
+        self.theme_style = ft.TextThemeStyle.BODY_LARGE
 
 
 class BorderContainer(ft.Container):
@@ -65,9 +65,7 @@ class SmallExplainContainer(ft.Container):
         self.content = ft.Column(
             controls=[
                 ft.Container(
-                    content=ft.Text(
-                        value=self.title, theme_style=ft.TextThemeStyle.TITLE_LARGE
-                    ),
+                    TitleText(value=self.title),
                     padding=ft.padding.all(5),
                     bgcolor=ft.Colors.ON_INVERSE_SURFACE,
                     border_radius=ft.border_radius.all(5),

@@ -19,7 +19,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.1
             SmallExplainContainer(
-                title="1. 事前準備（アイコンを用意する）",
+                title="1. アイコンを用意する",
                 body="リソースパックのアイコン、画像を用意します。画像ファイルの拡張子は.PNGで、サイズは1:1にしておいてください。",
             ),
             ft.Image(
@@ -29,7 +29,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.2
             SmallExplainContainer(
-                title="2. 事前準備（BGMを用意する）",
+                title="2. BGMを用意する",
                 body="リソースパックのBGM、オーディオを用意します。オーディオファイルの拡張子は.OGGで、アーティスト情報などの不要な情報は追加しないでください。",
             ),
             BodyText(
@@ -42,7 +42,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.3
             SmallExplainContainer(
-                title="3. プロジェクトを作成",
+                title="3. プロジェクトを作成する",
                 body="プロジェクトとはリソースパック作成時の情報（名前、説明、アイコン、etc）を保存するための物です。一度作成したリソースパックに追加でBGMを設定したい時に、また0から設定し直す必要がなくなります。",
             ),
             BodyText(
@@ -58,7 +58,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.4
             SmallExplainContainer(
-                title="4. プロジェクトを編集",
+                title="4. プロジェクトを編集する",
                 body="編集ボタンを押すと、作成するリソースパックの詳細設定が出来ます。",
             ),
             ft.Image(
@@ -68,7 +68,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.5
             SmallExplainContainer(
-                title="5. リソースパックの名前",
+                title="5. リソースパックの名前を入力する",
                 body="保存する際にも変更はできますが、空欄だと作成できません。安全のため半角英数字にすることをお勧めします。",
             ),
             ft.Image(
@@ -78,7 +78,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.6
             SmallExplainContainer(
-                title="6. リソースパックの説明",
+                title="6. リソースパックの説明を入力する",
                 body="空欄だと作成できません。安全のため半角英数字にすることをお勧めします。",
             ),
             ft.Image(
@@ -88,7 +88,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.7
             SmallExplainContainer(
-                title="7. リソースパックのアイコン",
+                title="7. リソースパックのアイコンを選択する",
                 body="用意しておいたアイコンの画像を選択してください。拡張子は.PNGです。",
             ),
             ft.Image(
@@ -98,7 +98,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.8
             SmallExplainContainer(
-                title="8. BGM",
+                title="8. BGMを選択する",
                 body="用意しておいたオーディオを選択してください。拡張子は.OGGです。複数選択できます。",
             ),
             BodyText(
@@ -111,7 +111,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.9
             SmallExplainContainer(
-                title="9. BGMの音量",
+                title="9. BGMの音量を設定する",
                 body="100%で変更なしです。普通に聴いて音量が大きい場合は、音量を下げてください。あまり大きすぎると効果音がかき消されます。",
             ),
             ft.Image(
@@ -121,7 +121,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.10
             SmallExplainContainer(
-                title="10. バージョン",
+                title="10. バージョンを設定する",
                 body="プレイするMinecraftのバージョンに合わせてください。違うバージョンで使おうとすると、警告が出る場合があります。",
             ),
             ft.Image(
@@ -151,7 +151,7 @@ class HelpView(ft.Column):
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             # No.13
             SmallExplainContainer(
-                title="13. エラー",
+                title="13. エラーについて",
                 body="設定内容に不備があれば発生しますが、不備がないのに発生たり、英語で書かれたエラーメッセージなど、不具合があった場合は、私に知らせてください。",
             ),
             ft.Image(
