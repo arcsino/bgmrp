@@ -12,10 +12,12 @@ class MakeView(ft.Column):
         self.controls = [ProjectList(self.edit_project)]
 
     def project_list(self):
+        """when IconButton() in EditHeader() is clicked"""
         self.controls = [ProjectList(self.edit_project)]
         self.update()
 
     def edit_project(self, item: ProjectItem):
+        """when PopupMenuButton() in ProjectItem() is clicked"""
         self.controls = [
             EditProject(
                 project_path=item.project_path,

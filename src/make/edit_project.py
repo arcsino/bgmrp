@@ -195,7 +195,7 @@ class EditProject(ft.Column):
                 icon=ft.Icons.HOURGLASS_TOP,
                 icon_color=ft.Colors.GREEN,
                 title="リソースパックを作成中...",
-                content="音声ファイルの数やサイズによっては、時間がかかる場合があります。",
+                content="オーディオファイルの数やサイズによっては、時間がかかる場合があります。",
                 actions=[],
             )
             making = make_rp(rp_path, project_obj)
@@ -205,7 +205,7 @@ class EditProject(ft.Column):
                     icon=ft.Icons.INFO,
                     icon_color=ft.Colors.BLUE,
                     title="リソースパックを作成しました",
-                    content=f"BGMリソースパックを{project_obj.name}.zipとして{rp.path}に保存しました。",
+                    content=rp.path,
                     actions=[
                         ShortButton(height=32, text="OK", on_click=self.dialog_close)
                     ],

@@ -125,10 +125,10 @@ def check_entry(obj: ProjectInfo):
             if not entry:
                 raise Exception(error)
         if not Path(obj.icon).exists():
-            raise Exception(f"{obj.icon}に画像ファイルが見つかりません。")
+            raise Exception(f"{obj.icon}が見つかりません。")
         for sound in obj.sounds:
             if not Path(sound).exists():
-                raise Exception(f"{sound}にオーディオファイルが見つかりません。")
+                raise Exception(f"{sound}が見つかりません。")
     except Exception as e:
         return e
 
