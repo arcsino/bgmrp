@@ -28,9 +28,9 @@
 > <b>このアプリはWindows専用であり、macOSでは動作しません</b>。
 
 以下のリンクからダウンロード出来ます。<br>
-https://github.com/arcsino/Bgmrp/releases/tag/v3.0.0
+[https://github.com/arcsino/Bgmrp/releases/tag/v3.0.0](https://github.com/arcsino/Bgmrp/releases/tag/v3.0.0)
 
 ## License
 Copyright (c) 2025 arcsino
 Released under the MIT license<br>
-https://github.com/arcsino/bgmrp/blob/main/LICENSE
+[https://github.com/arcsino/Bgmrp/blob/main/LICENSE](https://github.com/arcsino/Bgmrp/blob/main/LICENSE)
