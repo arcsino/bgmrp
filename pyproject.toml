@@ -1,7 +1,7 @@
 [project]
 name = "Bgmrp"
-version = "3.0.0"
-description = "This desktop app enables you to easily create resource pack that change the BGM of Minecraft."
+version = "1.0.0"
+description = "Bgmrp enables you to easily make resource packs that add some BGM to Minecraft."
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
@@ -24,7 +24,7 @@ product = "Bgmrp"
 company = "Flet"
 
 # copyright text to display in about app dialogs
-copyright = "Copyright (C) 2025 by Flet"
+copyright = "Copyright (C) 2025 by arcsino"
 
 [tool.flet.app]
 path = "src"
