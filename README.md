@@ -1,4 +1,4 @@
-# Bgmrp app
+# Bgmrp
 <div align="center">
     <br>
         <p>
@@ -11,16 +11,14 @@
         <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green" alt="license-MIT"></a>
     </p>
     <p><b>Bgmrp</b>はMinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。</p>
-    <p><b>リソースパックはJava版でのみ利用できます。</b></p>
+    <p><b>※リソースパックはJava版でのみ利用できます。</b></p>
 </div>
 
 ## Description
-追加されたBGMはデフォルトのBGMより、若干再生されやすいです。
-100回中、46回がデフォルトのBGMで、54回が追加したBGMくらいの感覚。
-運が悪かったり設定を間違えたら、再生されません。
-以下のコマンドで必ず再生されます。
+生成されるリソースパックは、あくまでもBGMを追加するものであって、デフォルトのBGMを置き換えるものではありません。デフォルトのBGMも再生されますし、運が悪かったり設定を間違えたら、追加したBGMは再生されません。<br>
+- 以下のコマンドで追加したBGMが必ず再生されますので、動作確認の際に実行してみてください。
 ```
-/playsound bgm music @p
+/playsound minecraft:bgm music @p
 ```
 
 ## Download
@@ -28,9 +26,9 @@
 > <b>このアプリはWindows専用であり、macOSでは動作しません</b>。
 
 以下のリンクからダウンロード出来ます。<br>
-https://github.com/arcsino/Bgmrp/releases/tag/v3.0.0
+[https://github.com/arcsino/Bgmrp/releases/tag/v3.0.0](https://github.com/arcsino/Bgmrp/releases/tag/v3.0.0)
 
 ## License
-Copyright (c) 2025 arcsino
-Released under the MIT license<br>
-https://github.com/arcsino/bgmrp/blob/main/LICENSE
+Copyright (c) 2025 arcsino <br>
+Released under the MIT license <br>
+[https://github.com/arcsino/Bgmrp/blob/main/LICENSE](https://github.com/arcsino/Bgmrp/blob/main/LICENSE)
