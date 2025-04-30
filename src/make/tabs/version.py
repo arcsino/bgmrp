@@ -19,7 +19,7 @@ class VersionTab(ft.Column):
         self.dropdown = ft.Dropdown(
             value=self.version,
             options=self.options,
-            border_color=ft.Colors.BLUE_GREY_200,
+            border_color=ft.Colors.ON_SURFACE_VARIANT,
             on_change=self.changed_option,
         )
         self.controls = [

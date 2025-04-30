@@ -27,7 +27,7 @@ class SoundsTab(ft.Column):
                     ),
                     ft.IconButton(
                         icon=ft.Icons.OPEN_IN_BROWSER,
-                        icon_color=ft.Colors.WHITE,
+                        icon_color=ft.Colors.ON_PRIMARY_CONTAINER,
                         on_click=lambda _: self.file_picker.pick_files(
                             dialog_title="音声ファイルを選択",
                             initial_directory=Path.cwd(),
@@ -56,7 +56,7 @@ class SoundsTab(ft.Column):
                     ft.Container(expand=True, content=BodyText(value=path)),
                     ft.IconButton(
                         icon=ft.Icons.CLOSE,
-                        icon_color=ft.Colors.WHITE,
+                        icon_color=ft.Colors.ON_PRIMARY_CONTAINER,
                         on_click=lambda _: self.delete_sound(index),
                     ),
                 ],
