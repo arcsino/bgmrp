@@ -12,7 +12,7 @@ class HomeView(ft.Column):
         self.controls = [
             ft.Divider(color=ft.Colors.TRANSPARENT),  # margin
             ExplainContainer(
-                title="Bgmrp v1.0.0",
+                title="Bgmrp v1.0.1",
                 body="MinecraftにBGMを追加するリソースパックを簡単に作れるデスクトップアプリです。",
             ),
             BodyText(value="※Java版限定です。"),

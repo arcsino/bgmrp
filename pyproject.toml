@@ -1,6 +1,6 @@
 [project]
 name = "Bgmrp"
-version = "1.0.0"
+version = "1.0.1"
 description = "Bgmrp enables you to easily make resource packs that add some BGM to Minecraft."
 readme = "README.md"
 requires-python = ">=3.9"
