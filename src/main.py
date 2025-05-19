@@ -1,10 +1,10 @@
 import flet as ft
 
 from navigation import NavView
-from home.home_view import HomeView
+from home_view import HomeView
 from make.make_view import MakeView
-from help.help_view import HelpView
-from setting.setting_view import SettingView
+from help_view import HelpView
+from setting_view import SettingView
 
 
 class MainView(ft.Row):
